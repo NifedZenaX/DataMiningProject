@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Checker</title>
+</head>
+<body>
+    <form action="{% url 'check' %}" method="post">
+        {% csrf_token %}
+        <!-- <label for="user_length">Username Length</label>
+        <input type="text" name="user_length" id="">
+        <br>
+        <label for="user_has_num">Does username has number</label>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="user_has_num" value="1">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="user_has_num" value="0">
+        <br>
+        <label for="name_length">Name Length</label>
+        <input type="text" name="name_length" id="">
+        <br>
+        <label for="user_has_num">Does name has number</label>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="name_has_num" value="1">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="name_has_num" value="0">
+        <br>
+        <label for="is_private">Is the account private</label>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="is_private" value="1">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="is_private" value="0">
+        <br>
+        <label for="recent_join">Does this account has been created recently</label>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="recent_join" value="1">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="recent_join" value="0">
+        <br> -->
+        <!-- {% for field in form %}
+            {{ field }}
+        {% endfor %} -->
+        {{ form.as_p }}
+        <button type="submit">Check</button>
+    </form>
+</body>
+</html>

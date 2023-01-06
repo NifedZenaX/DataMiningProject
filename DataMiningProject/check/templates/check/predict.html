@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+</head>
+<body>
+    {% if predict != None %}
+        {% if predict == 0 %}
+            <h1>It is not a fake account</h1>
+        {% else %}
+            <h1>It is a fake account</h1>
+        {% endif %}
+    {% else %}
+        <h1>Not Successful</h1>
+    {% endif %}
+</body>
+</html>
