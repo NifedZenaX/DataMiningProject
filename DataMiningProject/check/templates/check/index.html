@@ -4,48 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/sketchy/bootstrap.min.css">
     <title>Instagram Checker</title>
 </head>
-<body>
-    <form action="{% url 'check' %}" method="post">
-        {% csrf_token %}
-        <label for="user_length">Username Length</label>
-        <input type="text" name="user_length" id="">
-        <br>
-        <label for="user_has_num">Does username has number</label>
-        <label for="yes">Yes</label>
-        <input type="radio" id="yes" name="user_has_num" value="1">
-        <label for="no">No</label>
-        <input type="radio" id="no" name="user_has_num" value="0">
-        <br>
-        <label for="name_length">Name Length</label>
-        <input type="text" name="name_length" id="">
-        <br>
-        <label for="user_has_num">Does name has number</label>
-        <label for="yes">Yes</label>
-        <input type="radio" id="yes" name="name_has_num" value="1">
-        <label for="no">No</label>
-        <input type="radio" id="no" name="name_has_num" value="0">
-        <br>
-        <label for="is_private">Is the account private</label>
-        <label for="yes">Yes</label>
-        <input type="radio" id="yes" name="is_private" value="1">
-        <label for="no">No</label>
-        <input type="radio" id="no" name="is_private" value="0">
-        <br>
-        <label for="recent_join">Does this account has been created recently</label>
-        <label for="yes">Yes</label>
-        <input type="radio" id="yes" name="recent_join" value="1">
-        <label for="no">No</label>
-        <input type="radio" id="no" name="recent_join" value="0">
-        <br>
-        <label for="recent_join">Is this account a business account</label>
-        <label for="yes">Yes</label>
-        <input type="radio" id="yes" name="is_business_acc" value="1">
-        <label for="no">No</label>
-        <input type="radio" id="no" name="is_business_acc" value="0">
-        <br>
-        <button type="submit">Check</button>
-    </form>
+<body style="background-image: url('https://img.freepik.com/free-photo/white-paper-texture_1194-5416.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+    <div style="text-align:center; margin-top: 20px;">
+        <h1>Instagram Fake Account Checker &#128269;</h1>
+        <h6>2440004640 - Willie Soe<br>2401955151 - Timothy Fustian<br>2440021975 - Albertus Magnus Juan Sinaga
+        </h6>
+    </div>
+
+    <div style="margin: 0px 100px 0 100px">
+        <form action="{% url 'check' %}" method="post" sty>
+            {% csrf_token %}
+            <div class="form-group row">
+                <label class="form-label mt-4" for="user_length">Username Length</label>
+                <input class="form-control" type="text" name="user_length" id="">
+            </div>
+            <fieldset class="form-group">
+                <label class="form-label mt-4" for="user_has_num">Does username has number?</label>
+                <div class="form-check">
+                    <label class="form-check-label" for="yes">Yes</label>
+                    <input class="form-check-input" type="radio" id="yes" name="user_has_num" value="1">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label" for="no">No</label>
+                    <input class="form-check-input" type="radio" id="no" name="user_has_num" value="0">
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <label class="form-label mt-4" for="name_length">Name Length</label>
+                <input class="form-control" type="text" name="name_length" id="">
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content:space-between; flex-wrap:wrap; gap: 25px;">
+                <fieldset class="form-group">
+                    <label class="form-label mt-4" for="user_has_num">Does name has number?</label>
+                    <div class="form-check">
+                        <label class="form-check-label" for="yes">Yes</label>
+                        <input class="form-check-input" type="radio" id="yes" name="name_has_num" value="1">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="no">No</label>
+                        <input class="form-check-input" type="radio" id="no" name="name_has_num" value="0">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label class="form-label mt-4" for="is_private">Is the account private?</label>
+                    <div class="form-check">
+                        <label class="form-check-label" for="yes">Yes</label>
+                        <input class="form-check-input" type="radio" id="yes" name="is_private" value="1">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="no">No</label>
+                        <input class="form-check-input" type="radio" id="no" name="is_private" value="0">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label class="form-label mt-4" for="recent_join">Does this account has been created recently?</label>
+                    <div class="form-check">
+                        <label class="form-check-label" for="yes">Yes</label>
+                        <input class="form-check-input" type="radio" id="yes" name="recent_join" value="1">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="no">No</label>
+                        <input class="form-check-input" type="radio" id="no" name="recent_join" value="0">
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label class="form-label mt-4" for="recent_join">Is this account a business account?</label>
+                    <div class="form-check">
+                        <label class="form-check-label" for="yes">Yes</label>
+                        <input class="form-check-input" type="radio" id="yes" name="is_business_acc" value="1">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="no">No</label>
+                        <input class="form-check-input" type="radio" id="no" name="is_business_acc" value="0">
+                    </div>
+                </fieldset>
+            </div>
+            
+
+            <button class="btn btn-outline-primary" type="submit" style="margin-top:10px;">Check</button>
+        </form>
+    </div>
+
 </body>
 </html>

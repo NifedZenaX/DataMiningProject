@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/sketchy/bootstrap.min.css">
+
+    <title>Prediction Result</title>
 </head>
-<body>
-    {% if predict != None %}
-        {% if predict == 0 %}
-            <h1>It is not a fake account</h1>
+<body style="background-image: url('https://img.freepik.com/free-photo/white-paper-texture_1194-5416.jpg'); background-position: center; background-size: cover;">
+    <div style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        {% if predict != None %}
+            {% if predict == 0 %}
+                <h1>It is not a fake account &#10004;</h1>
+            {% else %}
+                <h1>It is a fake account &#128022;</h1>
+            {% endif %}
         {% else %}
-            <h1>It is a fake account</h1>
+            <h1>Not Successful</h1>
         {% endif %}
-    {% else %}
-        <h1>Not Successful</h1>
-    {% endif %}
+    </div>
 </body>
 </html>
